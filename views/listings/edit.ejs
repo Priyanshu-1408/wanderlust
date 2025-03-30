@@ -1,13 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
+<% layout ("/layouts/boilerplate") %>
+
     <h2>Create a new listing</h2>
     <form method="POST" action="/listings/<%=listing._id%>?_method=PUT"> 
+        
         <input name="listing[title]" value="<%=listing.title%>" type="text">
         <br><br>
         <textarea name="listing[description]"><%= listing.description %></textarea>
@@ -22,5 +17,4 @@
         <br><br>
         <button>edit</button>
     </form>
-</body>
-</html>
+
